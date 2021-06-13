@@ -7,15 +7,33 @@
           amount:0,
           default_cost:10,
           cost:10,
+          default_gps:1,
           gps:1,
-          name:"Factorio Assmebly Machine MK1"
+          name:"Mining Rig MK1"
         },
         factorio_machine2: {
           amount:0,
           default_cost:10,
           cost:10,
+          default_gps:10,
           gps:10,
-          name:"Factorio Assmebly Machine MK2"
+          name:"Mining Rig MK2"
+        }
+      },
+      eff_upgrades: {
+        factorio_machine: {
+          amount:0,
+          default_cost:100,
+          cost:100,
+          multiplier:1.5,
+          name:"MK1 Upgrade"
+        },
+        factorio_machine2: {
+          amount:0,
+          default_cost:1000,
+          cost:1000,
+          multiplier:1.25,
+          name:"MK2 Upgrade"
         }
       }
     };
@@ -37,11 +55,17 @@
     function reset_progress(){
       for (i in clicker.upgrades) {
         clicker.upgrades[i].amount = 0;
+        clicker.upgrades[i].gps = clicker.upgrades[i].default_gps;
         clicker.upgrades[i].cost = clicker.upgrades[i].default_cost;
+      }
+      for (i in clicker.eff_upgrades) {
+        clicker.eff_upgrades[i].amount = 0;
+        clicker.eff_upgrades[i].cost = clicker.eff_upgrades[i].default_cost;
       }
       clicker.gold = 0;
       clicker.total_gps = 0;
       update_upgrades();
+      update_eff_upgrades();
     }
 
 
@@ -59,14 +83,101 @@
     }
 
 
-// update_upgrades(): Placeholder for all upgrade buttons. Will pass in the desired upgrade into something_clicked(something).
-//This function is placed in the 'upgrades' div near the bottom of the code.
-    function update_upgrades() {
-      document.querySelector("#upgrades").innerHTML=""
-      for (i in clicker.upgrades) {
-        document.querySelector("#upgrades").innerHTML+= `<br> <button onclick="something_clicked('${i}')">${clicker.upgrades[i].name}</button> you have ${clicker.upgrades[i].amount}. Cost: ${clicker.upgrades[i].cost}. Generating: ${clicker.upgrades[i].gps * clicker.upgrades[i].amount} gps`;
+// somethingclicked(something): Updates the statistics for whatever object is passed into it (eg. upgrades).
+// This function is called when one of the buttons inside of the 'upgrades' div is pressed. Function will then update the total gp and 'upgrades' div text.
+    function eff_upgrade_purchases(something){
+      if(clicker.eff_upgrades[something].cost <= clicker.gold){
+        clicker.gold-= clicker.eff_upgrades[something].cost;
+        clicker.eff_upgrades[something].amount++;
+        clicker.upgrades[something].gps *= clicker.eff_upgrades[something].multiplier
+        clicker.eff_upgrades[something].cost += Math.round(clicker.eff_upgrades[something].cost*3.5)
+        calculate_totalgps();
+        update_eff_upgrades();
+        update_upgrades();
       }
     }
+
+// THIS WAS THE ONE THAT USED THE FOR LOOP. EVENTUALLY MAKE IT INTO THIS FORMAT.
+// update_upgrades(): Placeholder for all upgrade buttons. Will pass in the desired upgrade into something_clicked(something).
+//This function is placed in the 'upgrades' div near the bottom of the code.
+//    function update_upgrades() {
+//      document.querySelector("#upgrades").innerHTML=""
+//      for (i in clicker.upgrades) {
+//        document.querySelector("#upgrades").innerHTML+= `<br> <button onclick="something_clicked('${i}')">${clicker.upgrades[i].name}</button> you have ${clicker.upgrades[i].amount}. Cost: ${numberformat.format(Number(String(clicker.upgrades[i].cost)))}. Generating: ${ numberformat.format(Number(String(clicker.upgrades[i].gps * clicker.upgrades[i].amount)))} gps`;
+//      }
+//    }
+
+
+    function update_upgrades() {
+      var counter = 1;
+      for (i in clicker.upgrades) {
+        j = "up" + counter
+        document.querySelector("#" + j + "_h").innerHTML = clicker.upgrades[i].name;
+        document.querySelector("#" + j + "_cost").innerHTML = "Cost: " + numberformat.format(Number(String(clicker.upgrades[i].cost)));
+        document.querySelector("#" + j + "_amount").innerHTML = "Amount: " + numberformat.format(Number(String(clicker.upgrades[i].amount)));
+        document.querySelector("#" + j + "_gps").innerHTML = "Generating " + numberformat.format(Number(String((clicker.upgrades[i].gps * clicker.upgrades[i].amount)))) + " gps";
+
+        counter++;
+      }
+    }
+/*  OLD CODE THAT WAS NOT ITTERATIVE
+      var counter = 1;
+      i = "factorio_machine"
+      j = "up" + counter
+      document.querySelector("#" + j + "_h").innerHTML = clicker.upgrades[i].name;
+      document.querySelector("#" + j + "_cost").innerHTML = "Cost: " + numberformat.format(Number(String(clicker.upgrades[i].cost)));
+      document.querySelector("#" + j + "_amount").innerHTML = "Amount: " + numberformat.format(Number(String(clicker.upgrades[i].amount)));
+      document.querySelector("#" + j + "_gps").innerHTML = "Generating " + numberformat.format(Number(String((clicker.upgrades[i].gps * clicker.upgrades[i].amount)))) + " gps";
+      i = "factorio_machine2"
+      j = "up2"
+      document.querySelector("#" + j + "_h").innerHTML = clicker.upgrades[i].name;
+      document.querySelector("#" + j + "_cost").innerHTML = "Cost: " + numberformat.format(Number(String(clicker.upgrades[i].cost)));
+      document.querySelector("#" + j + "_amount").innerHTML = "Amount: " + numberformat.format(Number(String(clicker.upgrades[i].amount)));
+      document.querySelector("#" + j + "_gps").innerHTML = "Generating " + numberformat.format(Number(String((clicker.upgrades[i].gps * clicker.upgrades[i].amount)))) + " gps";
+*/
+
+
+// THIS WAS THE ONE THAT USED THE FOR LOOP. EVENTUALLY MAKE IT INTO THIS FORMAT.
+// update_upgrades(): Placeholder for all upgrade buttons. Will pass in the desired upgrade into something_clicked(something).
+//This function is placed in the 'upgrades' div near the bottom of the code.
+//    function update_eff_upgrades() {
+//    document.querySelector("#eff_upgrades").innerHTML=""
+//    for (i in clicker.eff_upgrades) {
+//      document.querySelector("#eff_upgrades").innerHTML+= `<br> <button onclick="eff_upgrade_purchases('${i}')">${clicker.eff_upgrades[i].name}</button> you have ${clicker.eff_upgrades[i].amount}. Cost: ${numberformat.format(Number(String(clicker.eff_upgrades[i].cost)))}. Total multiplier: ${clicker.eff_upgrades[i].multiplier * clicker.eff_upgrades[i].amount}`;
+    //  }
+    //}
+
+    function update_eff_upgrades() {
+      var counter = 1;
+      for (i in clicker.eff_upgrades) {
+        j = "up" + counter
+        document.querySelector("#eff_" + j + "_h").innerHTML = clicker.eff_upgrades[i].name;
+        document.querySelector("#eff_" + j + "_cost").innerHTML = "Cost: " + numberformat.format(Number(String(clicker.eff_upgrades[i].cost)));
+        document.querySelector("#eff_" + j + "_amount").innerHTML = "Amount: " + numberformat.format(Number(String(clicker.eff_upgrades[i].amount)));
+        document.querySelector("#eff_" + j + "_multiplier").innerHTML = "Multiplier: x" + (clicker.eff_upgrades[i].multiplier ** clicker.eff_upgrades[i].amount).toFixed(2);
+
+        counter++;
+      }
+    }
+
+/*  OLD CODE THAT WAS NOT ITTERATIVE
+        i = "factorio_machine"
+        document.querySelector("#MK1_h").innerHTML = clicker.eff_upgrades[i].name;
+        document.querySelector("#MK1_cost").innerHTML = "Cost: " + numberformat.format(Number(String(clicker.eff_upgrades[i].cost)));
+        document.querySelector("#MK1_amount").innerHTML = "Amount: " + numberformat.format(Number(String(clicker.eff_upgrades[i].amount)));
+        document.querySelector("#MK1_multiplier").innerHTML = "Multiplier: " + numberformat.format(Number(String((clicker.eff_upgrades[i].multiplier ** clicker.eff_upgrades[i].amount))));
+
+        i = "factorio_machine2"
+        document.querySelector("#MK2_h").innerHTML = clicker.eff_upgrades[i].name;
+        document.querySelector("#MK2_cost").innerHTML = "Cost: " + numberformat.format(Number(String(clicker.eff_upgrades[i].cost)));
+        document.querySelector("#MK2_amount").innerHTML = "Amount: " + numberformat.format(Number(String(clicker.eff_upgrades[i].amount)));
+        document.querySelector("#MK2_multiplier").innerHTML = "Multiplier: " + numberformat.format(Number(String(clicker.eff_upgrades[i].multiplier)));
+        //i = "factorio_machine2"
+        //document.querySelector("#eff_MK2").innerHTML+= `<br> <onclick="eff_upgrade_purchases('${i}')">${clicker.eff_upgrades[i].name}</button> you have ${clicker.eff_upgrades[i].amount}. Cost: ${numberformat.format(Number(String(clicker.eff_upgrades[i].cost)))}. Total multiplier: ${clicker.eff_upgrades[i].multiplier * clicker.eff_upgrades[i].amount}`;
+
+    //  }
+    }
+*/
 
 
 // load_game():
@@ -98,13 +209,14 @@
     function updateCount(){
       load_game();
       update_upgrades();
+      update_eff_upgrades();
       setInterval(() => {
         for(i in clicker.upgrades) {
           // Divided by 20 because 50ms in a 20th of a second
           clicker.gold+=clicker.upgrades[i].amount * clicker.upgrades[i].gps/20;
         }
-        document.querySelector("#gold").innerHTML = "Current gold: " + String(clicker.gold).split(".")[0];
-        document.querySelector("#total_gps").innerHTML = "Current gps: " + String(clicker.total_gps).split(".")[0];
+        document.querySelector("#gold").innerHTML = "Current gold: " + numberformat.format(Number(String(clicker.gold)));
+        document.querySelector("#total_gps").innerHTML = "Current gps: " +  numberformat.format(Number(String(clicker.total_gps)));
         save_game();
       }, 50);
     }

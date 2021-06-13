@@ -1,0 +1,58 @@
+body {
+  background-image: url("images/space1.jpg");
+}
+
+h3, h1, h2 {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.clickerContainer img {
+  position: relative;
+  transition: all .1s ease-in-out;
+  padding: 15px;
+}
+
+.upgradesContainer {
+  float:right;
+  width: 70%;
+}
+
+.leftContainer {
+  float: left;
+  width: 30%;
+}
+
+.eff_upgrades {
+  padding: 10px;
+}
+
+.eff_upgrades img {
+  padding-bottom: 10px;
+  float:left;
+}
+
+.eff_upgrades_header {
+  padding: 3px;
+  font-size: 20px;
+}
+
+.eff_upgrades_header2 {
+  padding: 3px;
+  font-size: 17px;
+}
+
+.eff_upgrades_text {
+  float:left;
+  padding: 10px;
+  padding-top: 20px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.eff_upgrades button {
+  width: 350px;
+}
+
+.clickerContainer img:hover { transform: scale(1.10); }
+.clickerContainer img:active { transform: scale(0.99); }

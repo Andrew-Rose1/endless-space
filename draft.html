@@ -2,12 +2,72 @@
 <head>
   <title>Idle Game Tester</title>
   <script src="functions.js"></script>
+  <script src="https://cdn.rawgit.com/erosson/swarm-numberformat/v0.1.0/dist/swarm-numberformat.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body onload="updateCount()">
-  <h1 id="gold">Current gold: 0</h1>
-  <h3 id="total_gps">Current gps: 0</h3>
-  <button onclick="clicker.gold++">Get 1 gold</button>
-  <button onclick="reset_progress()">RESET</button>
-  <div id="upgrades"></div>
-  <div id="increase_upgrades"></div>
+  <div class="leftContainer">
+    <center>
+      <h1 id="gold">Current gold: 0</h1>
+      <h3 id="total_gps">Current gps: 0</h3>
+      <div class="clickerContainer">
+          <img src="images/ship_white.png" height="281px" width="150px" onclick="clicker.gold++">
+      </div>
+      <button onclick="reset_progress()">RESET</button>
+    </center>
+  </div>
+
+  <div class="upgradesContainer">
+    <center>
+      <h2>Upgrades</h2>
+      <div class="eff_upgrades">
+        <button id="up1" onclick="something_clicked('factorio_machine')">
+          <div id="up1_h" class = "eff_upgrades_header"></div>
+          <div id="up1_cost" class = "eff_upgrades_header2"></div>
+          <img src="images/miner.png" height="87px" width = "87px">
+          <div class="eff_upgrades_text">
+            <div id="up1_amount" ></div>
+            <div id="up1_gps"></div>
+          </div>
+        </button>
+
+        <button id="up2" onclick="something_clicked('factorio_machine2')">
+          <div id="up2_h" class = "eff_upgrades_header"></div>
+          <div id="up2_cost" class = "eff_upgrades_header2"></div>
+          <img src="images/miner.png" height="87px" width = "87px">
+          <div class="eff_upgrades_text">
+            <div id="up2_amount" ></div>
+            <div id="up2_gps"></div>
+          </div>
+        </button>
+      </div>
+
+      <br>
+      <h2>Effeciancy Upgrades</h2>
+
+        <div class="eff_upgrades">
+          <button id="eff_up1" onclick="eff_upgrade_purchases('factorio_machine')">
+            <div id="eff_up1_h" class = "eff_upgrades_header"></div>
+            <div id="eff_up1_cost" class = "eff_upgrades_header2"></div>
+            <img src="images/miner.png" height="87px" width = "87px">
+            <div class="eff_upgrades_text">
+              <div id="eff_up1_amount" ></div>
+              <div id="eff_up1_multiplier"></div>
+            </div>
+          </button>
+
+          <button id="eff_up2" onclick="eff_upgrade_purchases('factorio_machine2')">
+            <div id="eff_up2_h" class = "eff_upgrades_header"></div>
+            <div id="eff_up2_cost" class = "eff_upgrades_header2"></div>
+            <img src="images/miner.png" height="87px" width = "87px">
+            <div class="eff_upgrades_text">
+              <div id="eff_up2_amount" ></div>
+              <div id="eff_up2_multiplier"></div>
+            </div>
+          </button>
+
+          </div>
+        </center>
+      </div>
+
 </body>
