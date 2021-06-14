@@ -31,7 +31,7 @@
           cost:1000,
           default_gps:9,
           gps:9,
-          name:"TNT"
+          name:"Excavator"
         },
         upgrade_4: {
           amount:0,
@@ -39,68 +39,37 @@
           cost:11000,
           default_gps:55,
           gps:55,
-          name:"Rocket Thruster Mining"
-        },
-        upgrade_5: {
-          amount:0,
-          default_cost:145000,
-          cost:145000,
-          default_gps:315,
-          gps:315,
-          name:"Python Mining"
-        },
-        upgrade_6: {
-          amount:0,
-          default_cost:1000000,
-          cost:1000000,
-          default_gps:1500,
-          gps:1500,
-          name:"AI Mining"
+          name:"Excavator"
         }
       },
-
       eff_upgrades: {
         upgrade_1: {
           amount:0,
           default_cost:250,
           cost:250,
           multiplier:2,
-          name:"Jackhammers (Manual Labor)"
+          name:"Jackhammers"
         },
         upgrade_2: {
           amount:0,
           default_cost:1250,
           cost:1250,
           multiplier:2,
-          name:"Mine Carts (Excavators)"
+          name:"Mine Carts"
         },
         upgrade_3: {
           amount:0,
           default_cost:10000,
           cost:10000,
           multiplier:2,
-          name:"Bigger Explosives (TNT)"
+          name:"Mine Carts"
         },
         upgrade_4: {
           amount:0,
-          default_cost:110000,
+          default_cost:11000,
           cost:110000,
           multiplier:2,
-          name:"Denser Oxidizer (Thrusters)"
-        },
-        upgrade_5: {
-          amount:0,
-          default_cost:1500000,
-          cost:1500000,
-          multiplier:2,
-          name:"More CPUs (Python)"
-        },
-        upgrade_6: {
-          amount:0,
-          default_cost:11000000,
-          cost:11000000,
-          multiplier:2,
-          name:"Machine Learning (AI)"
+          name:"Mine Carts"
         }
       }
     };

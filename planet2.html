@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-  <title>Planet 1</title>
+  <title>Planet 2</title>
 
   <script src="https://cdn.rawgit.com/erosson/swarm-numberformat/v0.1.0/dist/swarm-numberformat.min.js"></script>
   <link rel="stylesheet" href="styles.css">
@@ -21,18 +21,18 @@
       <div class="modal-body">
         <div id="planets">
           <img src="images/sun.png">
-          <img src="images/earth.png">
-          <a href="planet2.html" class="clickerContainer">
-            <img src="images/mars.png">
+          <a href="draft.html" class="clickerContainer">
+            <img src="images/earth.png">
           </a>
+          <img src="images/mars.png">
           <img src="images/saturn.png">
           <img src="images/red.png">
           <img src="images/pluto.png">
         </div>
       </div>
       <div class="modal-footer">
-          <h3>Current Location</h3>
-        <img src="images/earth.png" width="70px" height="70px">
+        <h3>Current Location</h3>
+        <img src="images/mars.png" width="80px" height="70px">
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@
 
 
 
-      <h1 id="gold">Current gold: 0</h1>
+      <h1 id="gold">Current Planet2 Currency: 0</h1>
       <h3 id="total_gps">Current gps: 0</h3>
       <div class="clickerContainer">
           <img src="images/ship_white_noback.png" height="281px" width="150px" onclick="clicker.gold += clicker.clicks.multiplier">
@@ -92,7 +92,7 @@
         <button id="up3" onclick="something_clicked('upgrade_3')" class="button2">
           <div id="up3_h" class = "eff_upgrades_header"></div>
           <div id="up3_cost" class = "eff_upgrades_header2"></div>
-          <img src="images/tnt.png" height="87px" width = "87px">
+          <img src="images/miner_noback.png" height="87px" width = "87px">
           <div class="eff_upgrades_text">
             <div id="up3_amount" ></div>
             <div id="up3_gps"></div>
@@ -102,7 +102,7 @@
         <button id="up4" onclick="something_clicked('upgrade_4')" class="button2">
           <div id="up4_h" class = "eff_upgrades_header"></div>
           <div id="up4_cost" class = "eff_upgrades_header2"></div>
-          <img src="images/thruster.png" height="87px" width = "156.25px">
+          <img src="images/drilling_tractor_noback.png" height="87px" width = "156.25px">
           <div class="eff_upgrades_text">
             <div id="up4_amount" ></div>
             <div id="up4_gps"></div>
@@ -112,7 +112,7 @@
         <button id="up5" onclick="something_clicked('upgrade_5')" class="button2">
           <div id="up5_h" class = "eff_upgrades_header"></div>
           <div id="up5_cost" class = "eff_upgrades_header2"></div>
-          <img src="images/python.png" height="87px" width = "87px">
+          <img src="images/miner_noback.png" height="87px" width = "87px">
           <div class="eff_upgrades_text">
             <div id="up5_amount" ></div>
             <div id="up5_gps"></div>
@@ -122,7 +122,7 @@
         <button id="up6" onclick="something_clicked('upgrade_6')" class="button2">
           <div id="up6_h" class = "eff_upgrades_header"></div>
           <div id="up6_cost" class = "eff_upgrades_header2"></div>
-          <img src="images/ai.png" height="87px" width = "105.25px">
+          <img src="images/drilling_tractor_noback.png" height="87px" width = "156.25px">
           <div class="eff_upgrades_text">
             <div id="up6_amount" ></div>
             <div id="up6_gps"></div>
@@ -160,27 +160,17 @@
           <button id="eff_up3" onclick="eff_upgrade_purchases('upgrade_3')" class="button3">
             <div id="eff_up3_h" class = "eff_upgrades_header"></div>
             <div id="eff_up3_cost" class = "eff_upgrades_header2"></div>
-            <img src="images/gunpowder.png" height="87px" width = "87px">
+            <img src="images/jackhammer.png" height="87px" width = "87px">
             <div class="eff_upgrades_text">
               <div id="eff_up3_amount" ></div>
               <div id="eff_up3_multiplier"></div>
             </div>
           </button>
 
-          <button id="eff_up4" onclick="eff_upgrade_purchases('upgrade_4')" class="button3">
-            <div id="eff_up4_h" class = "eff_upgrades_header"></div>
-            <div id="eff_up4_cost" class = "eff_upgrades_header2"></div>
-            <img src="images/oxi.png" height="87px" width = "102px">
-            <div class="eff_upgrades_text">
-              <div id="eff_up4_amount" ></div>
-              <div id="eff_up4_multiplier"></div>
-            </div>
-          </button>
-
           <button id="eff_up5" onclick="eff_upgrade_purchases('upgrade_5')" class="button3">
             <div id="eff_up5_h" class = "eff_upgrades_header"></div>
             <div id="eff_up5_cost" class = "eff_upgrades_header2"></div>
-            <img src="images/cpu.png" height="87px" width = "102px">
+            <img src="images/minerwithcart_noback.png" height="87px" width = "102px">
             <div class="eff_upgrades_text">
               <div id="eff_up5_amount" ></div>
               <div id="eff_up5_multiplier"></div>
@@ -190,7 +180,7 @@
           <button id="eff_up6" onclick="eff_upgrade_purchases('upgrade_6')" class="button3">
             <div id="eff_up6_h" class = "eff_upgrades_header"></div>
             <div id="eff_up6_cost" class = "eff_upgrades_header2"></div>
-            <img src="images/server.png" height="87px" width = "125px">
+            <img src="images/minerwithcart_noback.png" height="87px" width = "102px">
             <div class="eff_upgrades_text">
               <div id="eff_up6_amount" ></div>
               <div id="eff_up6_multiplier"></div>

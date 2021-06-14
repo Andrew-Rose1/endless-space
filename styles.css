@@ -2,9 +2,18 @@ body {
   background-image: url("images/space1.jpg");
 }
 
+.upper_right_buttons {
+  float:right;
+  padding: 10px;
+}
+
 h3, h1, h2 {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 .clickerContainer img {
@@ -18,13 +27,33 @@ h3, h1, h2 {
   width: 70%;
 }
 
+.clicker_button button {
+  width: 275px;
+}
+
 .leftContainer {
   float: left;
   width: 30%;
 }
 
+.upgrades {
+  padding: 10px;
+  float:left;
+}
+
+.upgrades button {
+  width: 350px;
+  padding: 10px;
+}
+
 .eff_upgrades {
   padding: 10px;
+  float:left;
+}
+
+.upgrades img {
+  padding-bottom: 10px;
+  float:left;
 }
 
 .eff_upgrades img {
@@ -56,3 +85,120 @@ h3, h1, h2 {
 
 .clickerContainer img:hover { transform: scale(1.10); }
 .clickerContainer img:active { transform: scale(0.99); }
+
+
+/* Popup box BEGIN */
+:root {
+  --modal-duration: 1s;
+  --modal-color: #428bca;
+}
+
+
+.button {
+  background: #428bca;
+  padding: 1em 2em;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button2 {
+  background: #0377fc;
+  padding: 7px;
+  color: #fff;
+  border: 3px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button3 {
+  background: #fc0303;
+  padding: 7px;
+  color: #fff;
+  border: 3px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #3876ac;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.systemContent {
+  margin: 10% auto;
+  width: 70%;
+  height: 70%
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background-image: url("images/space2.jpg");
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#planets img {
+  padding: 35px;
+}
+
+
+/* Popup box BEGIN */
