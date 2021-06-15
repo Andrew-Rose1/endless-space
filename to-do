@@ -1,3 +1,13 @@
 1) Logistics....
 2) Code
 3) Done
+
+ALL ONE ON SCREEN NO SCOLLING
+  Add 6 more upgrades (total 4x4)
+  Add 6 more eff_upgrades (total 4x4)
+  
+ Creaate new planet (same .js file?)
+  Need to run the same interval loop with all currencies being updated
+  
+ Add rocket page
+  unlock next planet once all parts are purchased
