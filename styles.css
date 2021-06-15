@@ -10,6 +10,7 @@ body {
 h3, h1, h2 {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin: 2px;
 }
 
 h2 {
@@ -42,8 +43,9 @@ h2 {
 }
 
 .upgrades button {
-  width: 350px;
+  width: 375px;
   padding: 10px;
+  margin: 6px;
 }
 
 .eff_upgrades {
@@ -80,7 +82,9 @@ h2 {
 }
 
 .eff_upgrades button {
-  width: 350px;
+  width: 375px;
+  padding: 10px;
+  margin: 6px;
 }
 
 .clickerContainer img:hover { transform: scale(1.10); }
