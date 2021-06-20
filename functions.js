@@ -39,7 +39,7 @@
           cost:11000,
           default_gps:55,
           gps:55,
-          name:"Rocket Thruster Mining"
+          name:"Rocket Thrusters"
         },
         upgrade_5: {
           amount:0,
@@ -56,6 +56,86 @@
           default_gps:1500,
           gps:1500,
           name:"AI Mining"
+        },
+        upgrade_7: {
+          amount:0,
+          default_cost:40,
+          cost:40,
+          default_gps:1,
+          gps:1,
+          name:"Manual Labor"
+        },
+        upgrade_8: {
+          amount:0,
+          default_cost:125,
+          cost:125,
+          default_gps:13,
+          gps:13,
+          name:"Excavator2"
+        },
+        upgrade_9: {
+          amount:0,
+          default_cost:1000,
+          cost:1000,
+          default_gps:9,
+          gps:9,
+          name:"TNT"
+        },
+        upgrade_10: {
+          amount:0,
+          default_cost:11000,
+          cost:11000,
+          default_gps:55,
+          gps:55,
+          name:"Rocket Thruster Mining"
+        },
+        upgrade_11: {
+          amount:0,
+          default_cost:145000,
+          cost:145000,
+          default_gps:315,
+          gps:315,
+          name:"Python Mining"
+        },
+        upgrade_12: {
+          amount:0,
+          default_cost:1000000,
+          cost:1000000,
+          default_gps:1500,
+          gps:1500,
+          name:"AI Mining"
+        },
+        upgrade_13: {
+          amount:0,
+          default_cost:1000,
+          cost:1000,
+          default_gps:9,
+          gps:9,
+          name:"TNT"
+        },
+        upgrade_14: {
+          amount:0,
+          default_cost:11000,
+          cost:11000,
+          default_gps:55,
+          gps:55,
+          name:"Rocket Thruster Mining"
+        },
+        upgrade_15: {
+          amount:0,
+          default_cost:145000,
+          cost:145000,
+          default_gps:315,
+          gps:315,
+          name:"Python Mining"
+        },
+        upgrade_16: {
+          amount:0,
+          default_cost:1000000,
+          cost:1000000,
+          default_gps:1500,
+          gps:1500,
+          name:"AI Mining"
         }
       },
 
@@ -65,14 +145,14 @@
           default_cost:250,
           cost:250,
           multiplier:2,
-          name:"Jackhammers (Manual Labor)"
+          name:"Auto (Manual Labor)"
         },
         upgrade_2: {
           amount:0,
           default_cost:1250,
           cost:1250,
           multiplier:2,
-          name:"Mine Carts (Excavators)"
+          name:"Carts (Excavators)"
         },
         upgrade_3: {
           amount:0,
@@ -86,7 +166,7 @@
           default_cost:110000,
           cost:110000,
           multiplier:2,
-          name:"Denser Oxidizer (Thrusters)"
+          name:"Oxidizer++ (Thrusters)"
         },
         upgrade_5: {
           amount:0,
@@ -331,8 +411,8 @@ if (e.target == modal) {
           // Divided by 20 because 50ms in a 20th of a second
           clicker.gold+=clicker.upgrades[i].amount * clicker.upgrades[i].gps/20;
         }
-        document.querySelector("#gold").innerHTML = "Current gold: " + numberformat.format(Number(String(clicker.gold)));
-        document.querySelector("#total_gps").innerHTML = "Current gps: " +  numberformat.format(Number(String(clicker.total_gps)));
+        document.querySelector("#gold").innerHTML = "Gold: " + numberformat.format(Number(String(clicker.gold)));
+        document.querySelector("#total_gps").innerHTML = "Gps: " +  numberformat.format(Number(String(clicker.total_gps)));
         save_game();
       }, 50);
     }

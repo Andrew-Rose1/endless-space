@@ -1,5 +1,6 @@
 body {
   background-image: url("images/space1.jpg");
+  padding-bottom: 100px;
 }
 
 .upper_right_buttons {
@@ -17,6 +18,9 @@ h2 {
   font-size: 30px;
 }
 
+.upgradesContainer {
+}
+
 .clickerContainer img {
   position: relative;
   transition: all .1s ease-in-out;
@@ -25,7 +29,7 @@ h2 {
 
 .upgradesContainer {
   float:right;
-  width: 70%;
+  width: 75%;
 }
 
 .clicker_button button {
@@ -34,57 +38,69 @@ h2 {
 
 .leftContainer {
   float: left;
-  width: 30%;
+  width: 25%;
 }
 
 .upgrades {
-  padding: 10px;
   float:left;
+  height: 40vh;
+  overflow-y: auto;
+  padding-bottom: 15px;
 }
 
 .upgrades button {
-  width: 375px;
-  padding: 10px;
-  margin: 6px;
+  width: 345px;
+  height: 115px;
+  padding: 3px;
+  margin: 2px;
+
 }
 
 .eff_upgrades {
-  padding: 10px;
   float:left;
+  height: 40vh;
+  overflow-y: auto;
 }
 
 .upgrades img {
-  padding-bottom: 10px;
   float:left;
+  text-align: center;
+  padding: 5px;
+  vertical-align: middle;
 }
 
+
 .eff_upgrades img {
-  padding-bottom: 10px;
   float:left;
+  text-align: center;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.helper {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .eff_upgrades_header {
-  padding: 3px;
+  padding-top: 3px;
   font-size: 20px;
 }
 
 .eff_upgrades_header2 {
-  padding: 3px;
   font-size: 17px;
 }
 
 .eff_upgrades_text {
-  float:left;
-  padding: 10px;
-  padding-top: 20px;
+  padding-top: 5px;
   font-size: 15px;
-  text-align: left;
 }
 
 .eff_upgrades button {
-  width: 375px;
-  padding: 10px;
-  margin: 6px;
+  width: 345px;
+  height: 115px;
+  padding: 3px;
+  margin: 2px;
 }
 
 .clickerContainer img:hover { transform: scale(1.10); }
