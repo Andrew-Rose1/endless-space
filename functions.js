@@ -59,84 +59,84 @@
         },
         upgrade_7: {
           amount:0,
-          default_cost:40,
-          cost:40,
-          default_gps:1,
-          gps:1,
-          name:"Manual Labor"
+          default_cost:17000000,
+          cost:17000000,
+          default_gps:12500,
+          gps:12500,
+          name:"Upgrade 7"
         },
         upgrade_8: {
           amount:0,
-          default_cost:125,
-          cost:125,
-          default_gps:13,
-          gps:13,
-          name:"Excavator2"
+          default_cost:250000000,
+          cost:250000000,
+          default_gps:75000,
+          gps:75000,
+          name:"Upgrade 8"
         },
         upgrade_9: {
           amount:0,
-          default_cost:1000,
-          cost:1000,
-          default_gps:9,
-          gps:9,
-          name:"TNT"
+          default_cost:4500000000,
+          cost:4500000000,
+          default_gps:385000,
+          gps:385000,
+          name:"Upgrade 9"
         },
         upgrade_10: {
           amount:0,
-          default_cost:11000,
-          cost:11000,
-          default_gps:55,
-          gps:55,
-          name:"Rocket Thruster Mining"
+          default_cost:75000000000,
+          cost:75000000000,
+          default_gps:2250000,
+          gps:2250000,
+          name:"Upgrade 10"
         },
         upgrade_11: {
           amount:0,
-          default_cost:145000,
-          cost:145000,
-          default_gps:315,
-          gps:315,
-          name:"Python Mining"
+          default_cost:1000000000000,
+          cost:1000000000000,
+          default_gps:10000000,
+          gps:10000000,
+          name:"Upgrade 11"
         },
         upgrade_12: {
           amount:0,
-          default_cost:1000000,
-          cost:1000000,
-          default_gps:1500,
-          gps:1500,
-          name:"AI Mining"
-        },
-        upgrade_13: {
-          amount:0,
-          default_cost:1000,
-          cost:1000,
-          default_gps:9,
-          gps:9,
-          name:"TNT"
-        },
-        upgrade_14: {
-          amount:0,
-          default_cost:11000,
-          cost:11000,
-          default_gps:55,
-          gps:55,
-          name:"Rocket Thruster Mining"
-        },
-        upgrade_15: {
-          amount:0,
-          default_cost:145000,
-          cost:145000,
-          default_gps:315,
-          gps:315,
-          name:"Python Mining"
-        },
-        upgrade_16: {
-          amount:0,
-          default_cost:1000000,
-          cost:1000000,
-          default_gps:1500,
-          gps:1500,
-          name:"AI Mining"
-        }
+          default_cost:14000000000000,
+          cost:14000000000000,
+          default_gps:85000000,
+          gps:85000000,
+          name:"Upgrade 12"
+        }//,
+        // upgrade_13: {
+        //   amount:0,
+        //   default_cost:1000,
+        //   cost:1000,
+        //   default_gps:9,
+        //   gps:9,
+        //   name:"Upgrade 13"
+        // },
+        // upgrade_14: {
+        //   amount:0,
+        //   default_cost:11000,
+        //   cost:11000,
+        //   default_gps:55,
+        //   gps:55,
+        //   name:"Upgrade 14"
+        // },
+        // upgrade_15: {
+        //   amount:0,
+        //   default_cost:145000,
+        //   cost:145000,
+        //   default_gps:315,
+        //   gps:315,
+        //   name:"Upgrade 15"
+        // },
+        // upgrade_16: {
+        //   amount:0,
+        //   default_cost:1000000,
+        //   cost:1000000,
+        //   default_gps:1500,
+        //   gps:1500,
+        //   name:"Upgrade 16"
+        // }
       },
 
       eff_upgrades: {
@@ -181,7 +181,334 @@
           cost:11000000,
           multiplier:2,
           name:"Machine Learning (AI)"
-        }
+        },
+        upgrade_7: {
+          amount:0,
+          default_cost:178500000,
+          cost:178500000,
+          multiplier:2,
+          name:"eff_upgrade_7"
+        },
+        upgrade_8: {
+          amount:0,
+          default_cost:2625000000,
+          cost:2625000000,
+          multiplier:2,
+          name:"eff_upgrade_8"
+        },
+        upgrade_9: {
+          amount:0,
+          default_cost:47250000000,
+          cost:47250000000,
+          multiplier:2,
+          name:"eff_upgrade_9"
+        },
+        upgrade_10: {
+          amount:0,
+          default_cost:712500000000,
+          cost:712500000000,
+          multiplier:2,
+          name:"eff_upgrade_10"
+        },
+        upgrade_11: {
+          amount:0,
+          default_cost:9000000000000,
+          cost:9000000000000,
+          multiplier:2,
+          name:"eff_upgrade_11"
+        },
+        upgrade_12: {
+          amount:0,
+          default_cost:126000000000000,
+          cost:126000000000000,
+          multiplier:2,
+          name:"eff_upgrade_12"
+        }//,
+        // upgrade_13: {
+        //   amount:0,
+        //   default_cost:10000,
+        //   cost:10000,
+        //   multiplier:2,
+        //   name:"Bigger Explosives (TNT)"
+        // },
+        // upgrade_14: {
+        //   amount:0,
+        //   default_cost:110000,
+        //   cost:110000,
+        //   multiplier:2,
+        //   name:"Oxidizer++ (Thrusters)"
+        // },
+        // upgrade_15: {
+        //   amount:0,
+        //   default_cost:1500000,
+        //   cost:1500000,
+        //   multiplier:2,
+        //   name:"More CPUs (Python)"
+        // },
+        // upgrade_16: {
+        //   amount:0,
+        //   default_cost:11000000,
+        //   cost:11000000,
+        //   multiplier:2,
+        //   name:"Machine Learning (AI)"
+        // }
+      }
+    };
+
+    // Planet 2 Variables
+    var clicker1 = {
+      steel:0,
+      total_sps:0,
+      clicks: {
+        multiplier: 1,
+        cost: 500,
+        default_cost: 500,
+        name: "Clicker Multiplier"
+      },
+      upgrades: {
+        upgrade_1: {
+          amount:0,
+          default_cost:40,
+          cost:40,
+          default_gps:1,
+          sps:1,
+          name:"Manual Labor"
+        },
+        upgrade_2: {
+          amount:0,
+          default_cost:125,
+          cost:125,
+          default_gps:3,
+          sps:3,
+          name:"Excavator"
+        },
+        upgrade_3: {
+          amount:0,
+          default_cost:1000,
+          cost:1000,
+          default_gps:9,
+          sps:9,
+          name:"TNT"
+        },
+        upgrade_4: {
+          amount:0,
+          default_cost:11000,
+          cost:11000,
+          default_gps:55,
+          sps:55,
+          name:"Rocket Thrusters"
+        },
+        upgrade_5: {
+          amount:0,
+          default_cost:145000,
+          cost:145000,
+          default_gps:315,
+          sps:315,
+          name:"Python Mining"
+        },
+        upgrade_6: {
+          amount:0,
+          default_cost:1000000,
+          cost:1000000,
+          default_gps:1500,
+          sps:1500,
+          name:"AI Mining"
+        },
+        upgrade_7: {
+          amount:0,
+          default_cost:17000000,
+          cost:17000000,
+          default_gps:12500,
+          sps:12500,
+          name:"Upgrade 7"
+        },
+        upgrade_8: {
+          amount:0,
+          default_cost:250000000,
+          cost:250000000,
+          default_gps:75000,
+          sps:75000,
+          name:"Upgrade 8"
+        },
+        upgrade_9: {
+          amount:0,
+          default_cost:4500000000,
+          cost:4500000000,
+          default_gps:385000,
+          sps:385000,
+          name:"Upgrade 9"
+        },
+        upgrade_10: {
+          amount:0,
+          default_cost:75000000000,
+          cost:75000000000,
+          default_gps:2250000,
+          sps:2250000,
+          name:"Upgrade 10"
+        },
+        upgrade_11: {
+          amount:0,
+          default_cost:1000000000000,
+          cost:1000000000000,
+          default_gps:10000000,
+          sps:10000000,
+          name:"Upgrade 11"
+        },
+        upgrade_12: {
+          amount:0,
+          default_cost:14000000000000,
+          cost:14000000000000,
+          default_gps:85000000,
+          sps:85000000,
+          name:"Upgrade 12"
+        }//,
+        // upgrade_13: {
+        //   amount:0,
+        //   default_cost:1000,
+        //   cost:1000,
+        //   default_gps:9,
+        //   gps:9,
+        //   name:"Upgrade 13"
+        // },
+        // upgrade_14: {
+        //   amount:0,
+        //   default_cost:11000,
+        //   cost:11000,
+        //   default_gps:55,
+        //   gps:55,
+        //   name:"Upgrade 14"
+        // },
+        // upgrade_15: {
+        //   amount:0,
+        //   default_cost:145000,
+        //   cost:145000,
+        //   default_gps:315,
+        //   gps:315,
+        //   name:"Upgrade 15"
+        // },
+        // upgrade_16: {
+        //   amount:0,
+        //   default_cost:1000000,
+        //   cost:1000000,
+        //   default_gps:1500,
+        //   gps:1500,
+        //   name:"Upgrade 16"
+        // }
+      },
+
+      eff_upgrades: {
+        upgrade_1: {
+          amount:0,
+          default_cost:250,
+          cost:250,
+          multiplier:2,
+          name:"Auto (Manual Labor)"
+        },
+        upgrade_2: {
+          amount:0,
+          default_cost:1250,
+          cost:1250,
+          multiplier:2,
+          name:"Carts (Excavators)"
+        },
+        upgrade_3: {
+          amount:0,
+          default_cost:10000,
+          cost:10000,
+          multiplier:2,
+          name:"Bigger Explosives (TNT)"
+        },
+        upgrade_4: {
+          amount:0,
+          default_cost:110000,
+          cost:110000,
+          multiplier:2,
+          name:"Oxidizer++ (Thrusters)"
+        },
+        upgrade_5: {
+          amount:0,
+          default_cost:1500000,
+          cost:1500000,
+          multiplier:2,
+          name:"More CPUs (Python)"
+        },
+        upgrade_6: {
+          amount:0,
+          default_cost:11000000,
+          cost:11000000,
+          multiplier:2,
+          name:"Machine Learning (AI)"
+        },
+        upgrade_7: {
+          amount:0,
+          default_cost:178500000,
+          cost:178500000,
+          multiplier:2,
+          name:"eff_upgrade_7"
+        },
+        upgrade_8: {
+          amount:0,
+          default_cost:2625000000,
+          cost:2625000000,
+          multiplier:2,
+          name:"eff_upgrade_8"
+        },
+        upgrade_9: {
+          amount:0,
+          default_cost:47250000000,
+          cost:47250000000,
+          multiplier:2,
+          name:"eff_upgrade_9"
+        },
+        upgrade_10: {
+          amount:0,
+          default_cost:712500000000,
+          cost:712500000000,
+          multiplier:2,
+          name:"eff_upgrade_10"
+        },
+        upgrade_11: {
+          amount:0,
+          default_cost:9000000000000,
+          cost:9000000000000,
+          multiplier:2,
+          name:"eff_upgrade_11"
+        },
+        upgrade_12: {
+          amount:0,
+          default_cost:126000000000000,
+          cost:126000000000000,
+          multiplier:2,
+          name:"eff_upgrade_12"
+        }//,
+        // upgrade_13: {
+        //   amount:0,
+        //   default_cost:10000,
+        //   cost:10000,
+        //   multiplier:2,
+        //   name:"Bigger Explosives (TNT)"
+        // },
+        // upgrade_14: {
+        //   amount:0,
+        //   default_cost:110000,
+        //   cost:110000,
+        //   multiplier:2,
+        //   name:"Oxidizer++ (Thrusters)"
+        // },
+        // upgrade_15: {
+        //   amount:0,
+        //   default_cost:1500000,
+        //   cost:1500000,
+        //   multiplier:2,
+        //   name:"More CPUs (Python)"
+        // },
+        // upgrade_16: {
+        //   amount:0,
+        //   default_cost:11000000,
+        //   cost:11000000,
+        //   multiplier:2,
+        //   name:"Machine Learning (AI)"
+        // }
       }
     };
     var delay = 0;
@@ -195,6 +522,13 @@
         clicker.total_gps += clicker.upgrades[i].amount * clicker.upgrades[i].gps;
       }
     }
+
+    // function calculate_totalsps(){
+    //   clicker.total_sps = 0;
+    //   for (i in clicker1.upgrades) {
+    //     clicker1.total_sps += clicker1.upgrades[i].amount * clicker1.upgrades[i].sps;
+    //   }
+    // }
 
 
     function increase_click_mult() {
@@ -249,6 +583,18 @@
     }
 
 
+//     function something_clicked1(something){
+//       if(clicker1.upgrades[something].cost <= clicker1.steel){
+//         clicker1.steel-= clicker1.upgrades[something].cost;
+//         clicker1.upgrades[something].amount++;
+// <!-- "The multuply by 0.15 is the price increase per upgrade cost" -->
+//         clicker1.upgrades[something].cost += Math.round(clicker1.upgrades[something].cost*0.15)
+//         calculate_totalsps();
+//         update_upgrades1();
+//       }
+//     }
+
+
 // somethingclicked(something): Updates the statistics for whatever object is passed into it (eg. upgrades).
 // This function is called when one of the buttons inside of the 'upgrades' div is pressed. Function will then update the total gp and 'upgrades' div text.
     function eff_upgrade_purchases(something){
@@ -262,6 +608,19 @@
         update_upgrades();
       }
     }
+
+
+    // function eff_upgrade_purchases1(something){
+    //   if(clicker1.eff_upgrades[something].cost <= clicker1.steel){
+    //     clicker1.steel-= clicker1.eff_upgrades[something].cost;
+    //     clicker1.eff_upgrades[something].amount++;
+    //     clicker1.upgrades[something].sps *= clicker1.eff_upgrades[something].multiplier
+    //     clicker1.eff_upgrades[something].cost += Math.round(clicker1.eff_upgrades[something].cost*4.5)
+    //     calculate_totalsps();
+    //     update_eff_upgrades1();
+    //     update_upgrades1();
+    //   }
+    // }
 
 // THIS WAS THE ONE THAT USED THE FOR LOOP. EVENTUALLY MAKE IT INTO THIS FORMAT.
 // update_upgrades(): Placeholder for all upgrade buttons. Will pass in the desired upgrade into something_clicked(something).
@@ -282,10 +641,23 @@
         document.querySelector("#" + j + "_cost").innerHTML = "Cost: " + numberformat.format(Number(String(clicker.upgrades[i].cost)));
         document.querySelector("#" + j + "_amount").innerHTML = "Amount: " + numberformat.format(Number(String(clicker.upgrades[i].amount)));
         document.querySelector("#" + j + "_gps").innerHTML = "Generating " + numberformat.format(Number(String((clicker.upgrades[i].gps * clicker.upgrades[i].amount)))) + " gps";
-
         counter++;
       }
     }
+
+
+    // function update_upgrades1() {
+    //   var counter = 1;
+    //   for (i in clicker1.upgrades) {
+    //     j = "up" + counter
+    //     document.querySelector("#" + j + "_h1").innerHTML = clicker.upgrades[i].name;
+    //     document.querySelector("#" + j + "_cost1").innerHTML = "Cost: " + numberformat.format(Number(String(clicker.upgrades[i].cost)));
+    //     document.querySelector("#" + j + "_amount1").innerHTML = "Amount: " + numberformat.format(Number(String(clicker.upgrades[i].amount)));
+    //     document.querySelector("#" + j + "_gps1").innerHTML = "Generating " + numberformat.format(Number(String((clicker.upgrades[i].gps * clicker.upgrades[i].amount)))) + " gps";
+    //
+    //     counter++;
+    //   }
+    // }
 /*  OLD CODE THAT WAS NOT ITTERATIVE
       var counter = 1;
       i = "factorio_machine"
@@ -326,6 +698,20 @@
       }
     }
 
+
+    function update_eff_upgrades1() {
+      var counter = 1;
+      for (i in clicker1.eff_upgrades) {
+        j = "up" + counter
+        document.querySelector("#eff_" + j + "_h1").innerHTML = clicker.eff_upgrades[i].name;
+        document.querySelector("#eff_" + j + "_cost1").innerHTML = "Cost: " + numberformat.format(Number(String(clicker.eff_upgrades[i].cost)));
+        document.querySelector("#eff_" + j + "_amount1").innerHTML = "Amount: " + numberformat.format(Number(String(clicker.eff_upgrades[i].amount)));
+        document.querySelector("#eff_" + j + "_multiplier1").innerHTML = "Multiplier: x" + (clicker.eff_upgrades[i].multiplier ** clicker.eff_upgrades[i].amount).toFixed(2);
+
+        counter++;
+      }
+    }
+
 /*  OLD CODE THAT WAS NOT ITTERATIVE
         i = "factorio_machine"
         document.querySelector("#MK1_h").innerHTML = clicker.eff_upgrades[i].name;
@@ -345,32 +731,32 @@
     }
 */
 
-//var modal = document.getElementById('simpleModal');
-const modal = document.querySelector('#mainSystem');
-const modalBtn = document.querySelector('#mapBtn');
-const closeBtn = document.querySelector('.close');
+  //var modal = document.getElementById('simpleModal');
+  const modal = document.querySelector('#mainSystem');
+  const modalBtn = document.querySelector('#mapBtn');
+  const closeBtn = document.querySelector('.close');
 
-// Events
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-window.addEventListener('click', outsideClick);
+  // Events
+  modalBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  window.addEventListener('click', outsideClick);
 
-// Open
-function openModal() {
-modal.style.display = 'block';
-}
+  // Open
+  function openModal() {
+    modal.style.display = 'block';
+  }
 
-// Close
-function closeModal() {
-modal.style.display = 'none';
-}
+  // Close
+  function closeModal() {
+    modal.style.display = 'none';
+  }
 
-// Close If Outside Click
-function outsideClick(e) {
-if (e.target == modal) {
-  modal.style.display = 'none';
-}
-}
+  // Close If Outside Click
+  function outsideClick(e) {
+    if (e.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
 
 
 
@@ -406,13 +792,22 @@ if (e.target == modal) {
       update_eff_clicks();
       update_upgrades();
       update_eff_upgrades();
+      // update_upgrades1();
+      // update_eff_upgrades1();
       setInterval(() => {
         for(i in clicker.upgrades) {
           // Divided by 20 because 50ms in a 20th of a second
           clicker.gold+=clicker.upgrades[i].amount * clicker.upgrades[i].gps/20;
         }
+        // for(i in clicker1.upgrades) {
+        //   // Divided by 20 because 50ms in a 20th of a second
+        //   clicker1.steel+=clicker1.upgrades[i].amount * clicker1.upgrades[i].sps/20;
+        // }
         document.querySelector("#gold").innerHTML = "Gold: " + numberformat.format(Number(String(clicker.gold)));
         document.querySelector("#total_gps").innerHTML = "Gps: " +  numberformat.format(Number(String(clicker.total_gps)));
+        // Insert Planet 2 Values
+        // document.querySelector("#steel").innerHTML = "Steel: " + numberformat.format(Number(String(clicker.gold)));
+        // document.querySelector("#total_sps").innerHTML = "Sps: " +  numberformat.format(Number(String(clicker.total_gps)));
         save_game();
       }, 50);
     }
