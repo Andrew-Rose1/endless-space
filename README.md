@@ -1,5 +1,5 @@
 # Endless Space -- Incremental Game
-### v1.0 is finally here!
+### v1.0
 Endless space is a web-based incremental game created using HTML, CSS, and Javascript. The goal of this game is to simply increase your gold gerneration (gold per second, or gps) by as much as possible. This game is very similar to other popular incremental games such as "Cookie Clicker".
 
 ## Features - v1.0
@@ -10,11 +10,16 @@ Endless space is a web-based incremental game created using HTML, CSS, and Javas
 - A clicker multiplier upgrade, which allows the player to recieve more gold per manual click on the rocket.
 - A reset progress button to start from scratch.
 
-## To be added in future updates:
-- A Prestige option, which will allow the player to start from the begining but unlock special rare upgrades/multipliers.
-- Other planets. The player will be able to unlock the ability to travel to other planets and gather other resources. Combining differnt planet's resources will allow the player to unlock special upgrades for their current run.
-- Add achievements.
-- An end game?...
+## Getting Started
+
+1. Clone the repository
+
+     ```sh
+    git clone https://github.com/Andrew-Rose1/endless-space
+    ```
+
+3. Open index.html
+
 
 ## Game Screenshots
 
@@ -26,6 +31,12 @@ Endless space is a web-based incremental game created using HTML, CSS, and Javas
 
 ### Solar System Map
 ![solarSystemMap](https://user-images.githubusercontent.com/55816533/137613549-ac0a7dff-1a92-464c-8874-900f68c8591e.JPG)
+
+## To be added in future updates:
+- A Prestige option, which will allow the player to start from the begining but unlock special rare upgrades/multipliers.
+- Other planets. The player will be able to unlock the ability to travel to other planets and gather other resources. Combining differnt planet's resources will allow the player to unlock special upgrades for their current run.
+- Add achievements.
+- An end game?...
 
 ## Developer Notes
 This game is still a work an progress. I plan to add more upgrades, achievements, other planets, prestige mode, rocket building, and much more!
