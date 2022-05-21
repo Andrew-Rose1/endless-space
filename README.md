@@ -18,7 +18,7 @@ Endless space is a web-based incremental game created using HTML, CSS, and Javas
     git clone https://github.com/Andrew-Rose1/endless-space
     ```
 
-3. Open index.html
+3. Open draft.html
 
 
 ## Game Screenshots
